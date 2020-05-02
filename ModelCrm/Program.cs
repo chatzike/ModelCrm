@@ -33,6 +33,20 @@ namespace ModelCrm
             Console.WriteLine($"Id = {customer.Id} " +
                 $"FirstName= {customer.FirstName}");
 
+            Customer toFind = custCrud.GetCustomerById(1);
+            Console.WriteLine($"Id = {toFind.Id} " +
+                $"FirstName= {toFind.FirstName}");
+
+            toFind = custCrud.GetCustomerById(100);
+            if (toFind != null)
+            {
+                Console.WriteLine($"Id = {toFind.Id} " +
+                    $"FirstName= {toFind.FirstName}");
+            }
+
+
+
+
         }
     }
 }

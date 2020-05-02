@@ -28,5 +28,14 @@ namespace ModelCrm.Services
             dbContext.SaveChanges();
             return customer;
         }
+
+        public Customer GetCustomerById(int id)
+        {
+            using CrmAppDbContext dbContext = new CrmAppDbContext();
+            Customer customer = dbContext.Customers.Find(id);
+
+            return customer;
+        }
+
     }
 }
